@@ -5,3 +5,4 @@
 #### 3- The user can see the current letter that must be typed highlighted with blue.the correct letters in green and incorrect letter in red.
 #### 4- The user can go back to specific place to type.
 #### 5- The game calulate the current WPM,the current CMP And the number of mistakes.
+## The live game url is here:  https://rammah-mohamed.github.io/Typing-Speed-Test-Game
