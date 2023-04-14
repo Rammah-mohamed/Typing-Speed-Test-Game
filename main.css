@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #3A98B9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 750px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .input-field {
+  position: absolute;
+  z-index: -999;
+  opacity: 0;
+}
+
+.wrapper .content-box {
+  padding: 20px;
+  border: 1px solid #3A98B9;
+  border-radius: 10px;
+}
+
+.wrapper .content-box .typing-box {
+  font-size: 18px;
+  letter-spacing: 1px;
+  word-break: break-all;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.wrapper .typing-box::-webkit-scrollbar {
+  width: 0;
+}
+
+.typing-box span {
+  position: relative;
+}
+
+.typing-box span.correct {
+  color: #56964F;
+}
+
+.typing-box span.incorrect {
+  color: #CB3439;
+  background-color: #FFC0CB;
+  outline: 1px solid #FFF;
+  border-radius: 4px;
+}
+
+.typing-box span.active {
+  color: #17A2B8;
+}
+
+.typing-box span.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  background-color: #17A2B8;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+.wrapper .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 30px;
+  border-top: 1px solid #3A98B9;
+}
+
+.wrapper .details button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #3A98B9;
+  color: #FFF;
+  cursor: pointer;
+  user-select: none;
+}
+
+.details .result {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  list-style: none;
+}
+
+.details .result li {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin: 0  10px;
+}
+
+.result li span {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: bold;
+}
