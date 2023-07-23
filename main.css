@@ -15,10 +15,28 @@ body {
 
 .wrapper {
   width: 750px;
+  margin: 50px auto;
   background-color: #FFF;
   border-radius: 10px;
   padding: 35px;
   box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .wrapper {
+    width: 450px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .wrapper {
+    width: 650px;
+  }
+}
+
+@media (min-width: 992px){
+  .wrapper {
+    width: 850px;
+  }
 }
 
 .wrapper .input-field {
@@ -110,6 +128,13 @@ body {
   flex: 1;
   align-items: center;
   list-style: none;
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .details .result {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .details .result li {
